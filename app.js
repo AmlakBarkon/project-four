@@ -15,4 +15,9 @@ $(document).ready(function() {
 
     }
   }
-})
+$(".item").on("click", function() {
+
+    $(this).css('background-color', 'yellow');
+
+	});
+});

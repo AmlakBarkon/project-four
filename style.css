@@ -1,12 +1,23 @@
+body {
+  background-color:black;
+  margin:0;
+  padding:0;
+}
 h1 {
   font-family: fantasy;
-  font-size: 24px;
+  font-size: 34px;
+  color:white;
   text-align: center;
 }
+.new-game .onebutton {
+  font-size: 34px;
+  color: #ff32aa;
+  text-align: center;
+  margin-left:600px;
+  margin-top:40px;
+}
 .line {
-  background-color:red;
   width:500px;
-
 }
 .item {
   background-color: green;
@@ -23,10 +34,4 @@ h1 {
   margin:0 auto;
   background-color: black;
 
-}
-.line:first-child .item {
-	border-top: 2px gray #99c2ff;
-}
-.item:first-child {
-	border-left: 2px gray #99c2ff;
 }
