@@ -1,4 +1,4 @@
-var count = 3;
+var count = 4;
 var minesAll = 4;
 var permit = false;
 
@@ -18,9 +18,9 @@ $(document).ready(function() {
 		}
 	}
 	$(".new-game button").on("click", function() {
-		 Game();
+		Game();
 		MinesCreate();
-    showMines();
+    //showMines();
 		permit = true;
 	});
 });
@@ -40,6 +40,7 @@ function Game() {
 				indexJ = Math.floor(Math.random()*count);
 				elem = [indexI, indexJ];
 				BoolCond = false;
+				console.log(indArr.length);
 				for (var j = 0; j < indArr.length; j++) {
 
 					if (indArr[j][0] == elem[0]
@@ -52,10 +53,10 @@ function Game() {
 			} while (BoolCond);
 			indArr.push(elem);
 			this.cells[indexI][indexJ] = -2;
-			console.log(elem);
+
 		}
 
-	},
+	}
 	this.showMines = function() {
 
 		for (var i = 0; i < count; i++) {
@@ -68,4 +69,4 @@ function Game() {
 		}
 
 	}
-}
+};
