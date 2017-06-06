@@ -20,9 +20,10 @@ $(document).ready(function() {
 	$(".new-game button").on("click", function() {
 		Game();
 		MinesCreate();
-    //showMines();
+    showMines();
 		permit = true;
 	});
+
 });
 function Game() {
 	this.cells = [];
@@ -32,7 +33,7 @@ function Game() {
 		var elem = [];
 		for (var i = 0; i < count; i++) {
 			this.cells[i] = [];
-      console.log(this.cells[i]);
+
 		}
 		for (var i = 0; i < minesAll; i++) {
 			do {
@@ -40,7 +41,7 @@ function Game() {
 				indexJ = Math.floor(Math.random()*count);
 				elem = [indexI, indexJ];
 				BoolCond = false;
-				console.log(indArr.length);
+				console.log(indArr);
 				for (var j = 0; j < indArr.length; j++) {
 
 					if (indArr[j][0] == elem[0]
@@ -64,9 +65,11 @@ function Game() {
 				if (this.cells[i][j] == -2)
 					$(".line").eq(i).find(".item").eq(j)
 					.html("&#x2602;").addClass("bold");
-						$(".bold").css("background-color", 'yellow');
+
 			}
+
 		}
 
 	}
+
 };
