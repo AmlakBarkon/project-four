@@ -49,6 +49,7 @@ h1, h4 {
 }
 .open {
 	background-color: green;
+	color: white;
 }
 
 .bold {
