@@ -59,15 +59,15 @@ function Game() {
 		var elem = [];
 		for (var i = 0; i < count; i++) {
 			this.cells[i] = [];
-			console.log(this.cells[i]);
+
 		}
 		for (var i = 0; i < minesAll; i++) {
 			do {
+
 				indI = Math.floor(Math.random()*count);
 				indJ = Math.floor(Math.random()*count);
 				elem = [indI, indJ];
 				cond = false;
-
 				for (var j = 0; j < indArr.length; j++) {
 
 			if (indArr[j][0] == elem[0]&& indArr[j][1] == elem[1]) {
@@ -75,11 +75,10 @@ function Game() {
 						break;
 					}
 				}
+				console.log(elem[1]);
 			} while (cond);
-
 			this.cells[indI][indJ] = -3;
 		}
-
 	},
 
 
